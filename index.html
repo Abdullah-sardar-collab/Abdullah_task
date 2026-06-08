@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Perspectives | Premium Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <nav class="glass-nav">
+        <div class="logo">M<span>P</span></div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Articles</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="btn-subscribe">Subscribe</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <span class="badge">Featured Article</span>
+            <h1>The Art of Minimalist <br><em>Digital Architecture</em></h1>
+            <p class="meta">By Julian Voss • 8 min read</p>
+        </header>
+
+        <section class="blog-grid">
+            <!-- Article 1 -->
+            <article class="glass-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-content">
+                    <span class="category">Design</span>
+                    <h3>Why "Less" is a Luxury in Modern Web Design</h3>
+                    <p>Exploring how white space influences user psychology and premium branding...</p>
+                    <a href="#" class="read-more">Read Entry →</a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="glass-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="card-content">
+                    <span class="category">Tech</span>
+                    <h3>The Future of Edge Computing and Serverless</h3>
+                    <p>A deep dive into how deployment cycles are shifting towards the user's doorstep...</p>
+                    <a href="#" class="read-more">Read Entry →</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // Subtle interaction: Card tilt effect
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
