@@ -3,65 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Perspectives | Premium Blog</title>
+    <title>Synthetica Editorial | The Future of Intelligence</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background-glow"></div>
-    
-    <nav class="glass-nav">
-        <div class="logo">M<span>P</span></div>
+    <div class="glow-canvas"></div>
+
+    <nav class="premium-nav">
+        <a href="index.html" class="nav-brand">SYNTHETICA<span>.</span></a>
         <ul class="nav-links">
-            <li><a href="#" class="active">Articles</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#" class="btn-subscribe">Subscribe</a></li>
+            <li><a href="index.html" class="active">Perspectives</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#" class="nav-cta">Subscribe</a></li>
         </ul>
     </nav>
 
-    <main class="container">
-        <header class="hero">
-            <span class="badge">Featured Article</span>
-            <h1>The Art of Minimalist <br><em>Digital Architecture</em></h1>
-            <p class="meta">By Julian Voss • 8 min read</p>
-        </header>
-
-        <section class="blog-grid">
-            <!-- Article 1 -->
-            <article class="glass-card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="card-content">
-                    <span class="category">Design</span>
-                    <h3>Why "Less" is a Luxury in Modern Web Design</h3>
-                    <p>Exploring how white space influences user psychology and premium branding...</p>
-                    <a href="#" class="read-more">Read Entry →</a>
+    <main class="hub-main">
+        <section class="hero-editorial">
+            <div class="ticker-wrap">
+                <div class="ticker">
+                    • RUNTIME UPDATE 2026: QUANTUM INFERENCE ONLINE • BREAKING: NEURAL ARCHITECTURES SHIFT TO BIOMIMETIC NETWORKS 
                 </div>
-            </article>
+            </div>
+            
+            <h1 class="editorial-title">
+                Documenting the <em>Metamorphosis</em> <br>of Artificial Mindsets.
+            </h1>
 
-            <!-- Article 2 -->
-            <article class="glass-card">
-                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="card-content">
-                    <span class="category">Tech</span>
-                    <h3>The Future of Edge Computing and Serverless</h3>
-                    <p>A deep dive into how deployment cycles are shifting towards the user's doorstep...</p>
-                    <a href="#" class="read-more">Read Entry →</a>
+            <div class="feature-split">
+                <!-- Main Core Story Block linking to the reading layout -->
+                <a href="article.html" class="main-feature-card" id="heroCard">
+                    <div class="card-meta-row">
+                        <span class="tag-premium">Longform Essay</span>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">June 2026</span>
+                    </div>
+                    <div class="card-title-block">
+                        <h2 style="font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.2; margin-bottom: 1rem;">
+                            The Ghost in the Architecture: When AI Outgrows Synthetic Prompting
+                        </h2>
+                        <p style="color: var(--text-muted); max-width: 600px; font-weight: 300;">
+                            An investigation into non-linear optimization frameworks and why human language constraints are limiting generative models.
+                        </p>
+                    </div>
+                    <div class="card-meta-row" style="border-top: 1px solid var(--surface-border); padding-top: 1.5rem;">
+                        <span style="font-size: 0.85rem; font-weight: 500;">Read Thesis →</span>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">12 Min Read</span>
+                    </div>
+                </a>
+
+                <!-- Side Feed List -->
+                <div class="feed-column">
+                    <a href="#" class="feed-item">
+                        <span class="tag-premium" style="font-size:0.65rem;">Briefing</span>
+                        <h4>Silicon Synthetics & The Carbon Cost of Real-Time Reasoning</h4>
+                        <p style="font-size:0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Quantifying the energy overhead of modern generative multi-modal layers.</p>
+                    </a>
+                    <a href="#" class="feed-item">
+                        <span class="tag-premium" style="font-size:0.65rem;">Deep Dive</span>
+                        <h4>Beyond Transformers: State-Space Models Take the Helm</h4>
+                        <p style="font-size:0.85rem; color: var(--text-muted); margin-top: 0.5rem;">Why contextual retention fields are structurally disrupting traditional neural pipelines.</p>
+                    </a>
+                    <a href="#" class="feed-item">
+                        <span class="tag-premium" style="font-size:0.65rem;">Interview</span>
+                        <h4>Architecting Consciousness with Dr. Aris Thorne</h4>
+                        <p style="font-size:0.85rem; color: var(--text-muted); margin-top: 0.5rem;">A dialogue on algorithmic variance and autonomous choice modeling.</p>
+                    </a>
                 </div>
-            </article>
+            </div>
         </section>
     </main>
 
     <script>
-        // Subtle interaction: Card tilt effect
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
+        // High-end dynamic mouse response effect
+        const heroCard = document.getElementById('heroCard');
+        if(heroCard) {
+            heroCard.addEventListener('mousemove', (e) => {
+                const rect = heroCard.getBoundingClientRect();
+                const x = e.clientX - rect.left - (rect.width/2);
+                const y = e.clientY - rect.top - (rect.height/2);
+                
+                heroCard.style.transform = `perspective(1000px) rotateX(${-y * 0.01}deg) rotateY(${x * 0.01}deg) translateY(-4px)`;
             });
-        });
+
+            heroCard.addEventListener('mouseleave', () => {
+                heroCard.style.transform = 'none';
+            });
+        }
     </script>
 </body>
 </html>
